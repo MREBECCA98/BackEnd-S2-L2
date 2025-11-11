@@ -10,7 +10,7 @@ Console.WriteLine("""
     """);
 int scelta = int.Parse(Console.ReadLine());
 
-List<CV> Info = new List<CV>();
+
 
 switch (scelta)
 {
@@ -72,13 +72,15 @@ switch (scelta)
                 else if (!cv.InfoPersonali.Email.Contains("@"))
                 {
                     Console.WriteLine("Campo non valido, inserisci @");
-                } ;
+                }
+                ;
             } while (string.IsNullOrWhiteSpace(cv.InfoPersonali.Email) || !cv.InfoPersonali.Email.Contains("@"));
 
+            //riepilogo
+            cv.InfoPersonali.RiepilogoInfoPersonali();
 
 
 
-            Info.Add(cv);
         }
         catch (FormatException ex)
         {

@@ -27,7 +27,17 @@ namespace BackEnd_S2_L2.Classi
         public string Telefono { get; set; }
         public string Email { get; set; }
 
-
+        public void RiepilogoInfoPersonali()
+        {
+            Console.WriteLine("\n==================================");
+            Console.WriteLine(" RIEPILOGO INFORMAZIONI PERSONALI");
+            Console.WriteLine("==================================");
+            Console.WriteLine($"Nome: {Nome}");
+            Console.WriteLine($"Cognome: {Cognome}");
+            Console.WriteLine($"Telefono: {Telefono}");
+            Console.WriteLine($"Email: {Email}");
+            Console.WriteLine("==================================");
+        }
 
     }
 
